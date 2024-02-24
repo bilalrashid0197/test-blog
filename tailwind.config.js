@@ -26,7 +26,7 @@ module.exports = {
     }
   },
   plugins: [
-    require("@tailwind/line-clamp"),
+    require("@tailwindcss/typography"),
     require("@tailwindcss/typography"),
   ],
 }

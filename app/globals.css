@@ -10,3 +10,9 @@ body,
     width:100%;
     @apply text-sm;
 }
+
+/* Search Bar Divider Line */
+.verticalLineForHeader {
+    height: 20px;
+    border-left: 1px solid black
+}

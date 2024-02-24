@@ -1,6 +1,9 @@
 import type { Metadata } from "next";
 import { Open_Sans } from "next/font/google"; // Importing the font we will be using
-import "./globals.css";
+import "./globals.css"; // Importing the global css to be applied to the document
+import Navbar from "./(shared)/Navbar"; // Importing the Navbar component
+{/* import Home from "./page";*/}
+
 
 const openSans = Open_Sans({ subsets: ["latin"] });
 
@@ -16,7 +19,11 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" className={openSans.className}> {/* Since we target the whole HTML document our font is now Open Sans*/}
-      <body>{children}</body>  
+      <body>
+        <Navbar />
+        {children}
+      {/*<Footer />*/}
+        </body>
     </html>
   );
 }
