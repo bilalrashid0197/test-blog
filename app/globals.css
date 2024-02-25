@@ -14,5 +14,6 @@ body,
 /* Search Bar Divider Line */
 .verticalLineForHeader {
     height: 20px;
+    width: 0px;
     border-left: 1px solid black
 }

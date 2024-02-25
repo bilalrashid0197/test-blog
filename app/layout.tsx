@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Open_Sans } from "next/font/google"; // Importing the font we will be using
 import "./globals.css"; // Importing the global css to be applied to the document
 import Navbar from "./(shared)/Navbar"; // Importing the Navbar component
+import Footer from "./(shared)/Footer";
 {/* import Home from "./page";*/}
 
 
@@ -22,7 +23,7 @@ export default function RootLayout({
       <body>
         <Navbar />
         {children}
-      {/*<Footer />*/}
+        <Footer />
         </body>
     </html>
   );

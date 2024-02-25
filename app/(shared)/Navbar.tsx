@@ -13,12 +13,12 @@ const Navbar = (props: Props) => {
     <div className="w-2/4">
       <h1 className="font-bold text-3xl md:text-4xl">The Digital Blog</h1>
       <p className="mt-3 text-sm">
-    Blog dedicated towards AI generation and job automation
-  </p>
+        Discover fresh perspectives and join the conversation on our blog — where every post is a new adventure in thought and community.
+      </p>
     </div>
     {/* SUBSCRIBE BUTTON */}
     <div className="flex justify-end">
-      <button type="button" className="bg-black font-bold text-white rounded-lg px-5 md:px-8 py-2 md:py-3 duration-300 hover:scale-105">
+      <button type="button" className="bg-black font-bold text-white rounded-lg px-5 md:px-8 py-2 md:py-3 duration-300 hover:scale-110">
         Subscribe
       </button>
     </div>
@@ -27,14 +27,21 @@ const Navbar = (props: Props) => {
   <hr className="border-y-2 border-black mt-2 mx-10"/>
   <div className="flex justify-between px-10 pt-4 pb-1">
     {/* BUTTONS FOR NAVIGATION */}
-    <div className="basis-1/4 flex justify-between items-center gap-10">
-      <Link href="/">Home</Link>
-      <Link href="/">Trending</Link>
-      <Link href="/">About</Link>
+    <div className="basis-7 flex justify-between items-center gap-10">
+      <Link href="/" className="text-base underline hover:text-blue-400 hover:scale-110 duration-300">Home</Link>
+      <Link href="/" className="text-base underline hover:text-blue-400 hover:scale-110 duration-300">Trending</Link>
+      <Link href="/" className="text-base underline hover:text-blue-400 hover:scale-110 duration-300">About</Link>
     </div>
     {/* SEARCH BAR */}
-    <div className="basis-full ml-10">
-      <div className="verticalLineForHeader"></div>
+    <div className="basis-full ml-6 flex w-full">
+      <div className="verticalLineForHeader"></div> {/*Vertical Line*/}
+      {/* SEARCH BAR */}
+      <button>
+        <MagnifyingGlassIcon className="ml-1 w-5 h-5" />
+      </button> 
+      <form className="ml-2 w-full">
+          <input type="text" placeholder='Search . . .' className="w-full placeholder-black border border-t-0 border-l-0 border-r-0 border-gray-400 outline-none"></input>
+      </form>
     </div>
   </div>
   {/* HORIZONTAL RULE FOR DIVISION OFF SECTIONS */}
