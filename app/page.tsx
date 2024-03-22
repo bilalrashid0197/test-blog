@@ -9,7 +9,17 @@ export const revalidate = 60;
 
 const getPosts = async () => {
   const posts = await prisma.post.findMany();
-  return posts;
+  const formattedPosts = await Promise.all(
+    posts.map(async (post: Post) => {
+      const imageModule = require(`../public${post.image}`);
+      return {
+        ...post,
+        image: imageModule.default,
+      }
+    })
+
+  )
+  return formattedPosts;
 }
 
 export default async function Home() {
@@ -34,7 +44,7 @@ export default async function Home() {
       if(posts[i]?.category === "Travel"){
         travelPosts.push(posts[i]);
       }
-      //allPosts = allPosts.sort((a,b) => 0.5 - Math.random()) // Shuffle all Posts
+      allPosts = allPosts.sort((a,b) => 0.5 - Math.random()) // Shuffle all Posts
     }    
     return [allPosts, trendingPosts, techPosts, travelPosts];
   };
