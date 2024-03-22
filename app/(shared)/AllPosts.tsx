@@ -1,8 +1,11 @@
 import React from 'react'
 import Card from './Card'
-type Props = {}
+import { Post } from '@prisma/client'
+type Props = {
+    allPosts: Array<Post>;
+}
 
-const Other = (props: Props) => {
+const AllPosts = ({allPosts}: Props) => {
   return (
     <section>
         <hr className="border-1"/>
@@ -12,22 +15,29 @@ const Other = (props: Props) => {
             <Card
                 className="bg-wh-500 mt-5 sm:mt-0"
                 imageHeight="h-80"
+                post={allPosts[0]}
             />
             <Card
                 className="bg-wh-500 mt-5 sm:mt-0"
                 imageHeight="h-80"
+                post={allPosts[1]}
+
             />
             <Card
                 className="bg-wh-500 mt-5 sm:mt-0"
                 imageHeight="h-80"
+                post={allPosts[2]}
+
             />
             <Card
                 className="bg-wh-500 mt-5 sm:mt-0"
                 imageHeight="h-80"
+                post={allPosts[3]}
+
             />
         </div>
     </section>
   )
 }
 
-export default Other
+export default AllPosts;
