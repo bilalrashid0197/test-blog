@@ -46,7 +46,6 @@ type Props = {
 const Trending = ({trendingPosts}: Props) => {
   return (
     <section className="pt-3 pb-10">
-
     <div className="flex items-center gap-3">
         <div className="bg-wh-900 py-2 px-8 text-wh-10 font-bold">
             TRENDING

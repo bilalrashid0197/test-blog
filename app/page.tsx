@@ -46,15 +46,15 @@ export default async function Home() {
       }
       allPosts = allPosts.sort((a,b) => 0.5 - Math.random()) // Shuffle all Posts
     }    
-    return [allPosts, trendingPosts, techPosts, travelPosts];
+    return [allPosts, trendingPosts, techPosts, travelPosts];  
   };
   
   const [allPosts, trendingPosts, techPosts, travelPosts] = formatPost();
   return (
     <main className="px-10 leading-7">
       <Trending trendingPosts={trendingPosts}/>
-      <div className="md:flex gap-10 mb-5">
-        <div className="basis-3/4">
+      <div className="md:flex mb-5">
+      <div /*className="basis-3/4"*/>
           <Tech techPosts={techPosts} />
           <Travel travelPosts={travelPosts}/>
           <AllPosts allPosts={allPosts} />
