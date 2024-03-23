@@ -9,7 +9,7 @@ type Props = {
 const Tech = ({techPosts}: Props) => {
     return(
         <section>
-            <hr className="border-1" />
+            <hr className="border-1 border-black" />
             {/* HEADER */}
             <div className="flex items-center gap-3 my-8">
                 <h4 className="bg-accent-orange py-2 px-5 text-wh-900 text-sm font-bold">HOT</h4>
@@ -22,7 +22,8 @@ const Tech = ({techPosts}: Props) => {
                 <Card className="col-span-1 row-span-3"
                 imageHeight='h-96' 
                 isLongForm={true}
-                post={techPosts[0]} />
+                post={techPosts[0]}
+                 />
 
                 {/* SMALL CARDS */}
                 <Card className="col-span-1 row-span-1 mt-10 sm:mt-0 flex justify-between gap-3"

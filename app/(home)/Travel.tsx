@@ -9,7 +9,7 @@ type Props = {
 const Travel = ({travelPosts}: Props) => {
   return (
     <section className="mt-10">
-        <hr className="border-1"/>
+        <hr className="border-1 border-black"/>
         {/* HEADER */}
         <div className="flex items-center gap-3 my-8">
             <h4 className="bg-accent-green py-2 px-5 text-wh-900 text-sm font-bold">TRAVEL</h4>
@@ -38,7 +38,7 @@ const Travel = ({travelPosts}: Props) => {
             className="sm:flex justify-between items-center gap-3 mt-7 mb-5"
             imageHeight='h-80'
             post={travelPosts[3]}
-
+            isLongForm={true}
         />
     </section>
   )

@@ -55,15 +55,9 @@ export default async function Home() {
       <Trending trendingPosts={trendingPosts}/>
       <div className="md:flex mb-5">
       <div /*className="basis-3/4"*/>
-          <Tech techPosts={techPosts} />
+          <Tech techPosts={techPosts}  />
           <Travel travelPosts={travelPosts}/>
           <AllPosts allPosts={allPosts} />
-          <div className="hidden md:block">
-
-          </div>
-        </div>
-        <div className="1/4">
-          {/*<Sidebar />*/}
         </div>
       </div>
     </main>

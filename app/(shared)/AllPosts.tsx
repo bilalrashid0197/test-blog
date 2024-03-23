@@ -9,7 +9,7 @@ type Props = {
 const AllPosts = ({allPosts}: Props) => {
   return (
     <section>
-        <hr className="border-1"/>
+        <hr className="border-1 border-black"/>
         {/* HEADER */}
         <p className="font-bold text-2xl my-8">All Posts</p>
         <div className="sm:grid grid-cols-3 gap-8">
