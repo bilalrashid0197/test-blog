@@ -32,8 +32,8 @@ const Card = ({className, imageHeight, isSmallCard = false, isLongForm = false, 
                            (max-width: 768px) 75vw,
                            (max-width: 1060px) 50vw,
                            33vw"
-                style={{objectFit : "cover", borderRadius: "3px",}}
-            />
+                style={{objectFit : "cover", borderRadius: "4px"}}
+            />"
             </div>
         </Link>
         <div className="basis-full">

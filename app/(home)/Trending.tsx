@@ -14,7 +14,7 @@ const TrendingCard = ({className, post}: TrendingCardProps) => {
             className={`${className} sm:mt-0 sm:h-auto relative mt-7 block w-full h-96 hover:opacity-70 duration-500`}
             href={`${process.env.NEXT_PUBLIC_URL}/post/${post?.id}`}
         >
-            <div className="z-0 relative w-full h-full">
+            <div className="z-0 relative w-full h-full" style={{borderRadius: "4px"}}>
                 <Image 
                     fill
                     alt="tech"
@@ -24,7 +24,7 @@ const TrendingCard = ({className, post}: TrendingCardProps) => {
                             (max-width: 768px) 75vw,
                             (max-width: 1060px) 50vw,
                             33vw"
-                    style={{objectFit : "cover"}}
+                    style={{objectFit : "cover", borderRadius: "4px "}}
                 />
             </div>
             <div className="absolute z-1 top-0 left-0 w-full h-full bg-gradient-gradual" />
@@ -45,7 +45,7 @@ type Props = {
 
 const Trending = ({trendingPosts}: Props) => {
   return (
-    <section className="pt-3 pb-10">
+    <section className="pt-3 pb-10" id="trendingSection">
     <div className="flex items-center gap-3">
         <div className="bg-wh-900 py-2 px-8 text-wh-10 font-bold">
             TRENDING

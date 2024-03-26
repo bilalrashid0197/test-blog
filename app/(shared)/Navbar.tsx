@@ -29,8 +29,8 @@ const Navbar = (props: Props) => {
     {/* BUTTONS FOR NAVIGATION */}
     <div className="basis-7 flex justify-between items-center gap-10">
       <Link href="/" className="text-base underline hover:text-blue-400 hover:scale-110 duration-300">Home</Link>
-      <Link href="/" className="text-base underline hover:text-blue-400 hover:scale-110 duration-300">Trending</Link>
-      <Link href="/" className="text-base underline hover:text-blue-400 hover:scale-110 duration-300">About</Link>
+      <Link href="/#trendingSection" className="text-base underline hover:text-blue-400 hover:scale-110 duration-300">Trending</Link>
+      {/*<Link href="/" className="text-base underline hover:text-blue-400 hover:scale-110 duration-300">About</Link>*/}
     </div>
     {/* SEARCH BAR */}
     <div className="basis-full ml-6 flex w-full">
