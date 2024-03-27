@@ -4,6 +4,7 @@ import { Post as PostType } from '@prisma/client'
 import { FormattedPost } from '@/app/types'
 import Content from './Content'
 import OtherPosts from './OtherPosts'
+import { Pinterest } from '@mui/icons-material'
 
 type Props = {
   params: {id: string}
@@ -40,9 +41,9 @@ const Post = async ({params}: Props) => {
         <div className="basis-3/4">
           <Content post={post}/>
         </div>
-        <hr className="border-1 border-black"/>
+        <hr id="hrElement" className="border-1 border-black"/>
         <div className="basis-1/4">
-          <OtherPosts />
+          <OtherPosts postId={post?.id}/>
         </div>
       </div>
     </main>

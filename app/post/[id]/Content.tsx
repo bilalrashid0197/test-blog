@@ -7,15 +7,8 @@ type Props = {
 }
 
 const Content = ({post}: Props) => {
-    const [isEditable, setIsEditable] = useState<Boolean>(false);
-    
-    const [title, setTitle] = useState<String>(post.title);
-    const [titleError, setTitleError] = useState<string>("");
 
-    const [content, setContent] = useState<String>(post.content);
-    const [contentError, setContentError] = useState<String>("");
-
-    return (<div className="prose w-full max-w-full mb-10">
+    return (<div className="prose w-full max-w-full mb-8">
         {/* Breadcrums */}
         <h5 className="text-wh-300">{`Home > ${post.category} > ${post.title}`}</h5>
 
