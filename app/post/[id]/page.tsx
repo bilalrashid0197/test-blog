@@ -3,6 +3,7 @@ import React from 'react'
 import { Post as PostType } from '@prisma/client'
 import { FormattedPost } from '@/app/types'
 import Content from './Content'
+import OtherPosts from './OtherPosts'
 
 type Props = {
   params: {id: string}
@@ -27,7 +28,7 @@ const getPost = async (id: string) => {
   }
 
   return formattedPost;
-}
+};
 
 
 const Post = async ({params}: Props) => {
@@ -39,7 +40,9 @@ const Post = async ({params}: Props) => {
         <div className="basis-3/4">
           <Content post={post}/>
         </div>
+        <hr className="border-1 border-black"/>
         <div className="basis-1/4">
+          <OtherPosts />
         </div>
       </div>
     </main>

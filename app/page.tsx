@@ -4,6 +4,7 @@ import Travel from "./(home)/Travel";
 import { prisma } from "app/api/client";
 import { Post } from "@prisma/client";
 import AllPosts from "./(shared)/AllPosts";
+import OtherPosts from "./post/[id]/OtherPosts";
 
 export const revalidate = 60;
 

@@ -17,12 +17,12 @@ const Footer = () => {
                 <a href="" className="underline hover:text-blue-600 text-blue-400">
                     <p className="my-3">Home</p>
                 </a>
-                <a href="" className="underline hover:text-blue-600 text-blue-400">
+                <a href="/#trendingSection" className="underline hover:text-blue-600 text-blue-400">
                     <p className="my-3">Trending</p>
                 </a>
-                <a href=""  className="underline hover:text-blue-600 text-blue-400">
+                {/*<a href=""  className="underline hover:text-blue-600 text-blue-400">
                     <p>About</p>
-                </a>
+                </a>*/}
             </div>
             {/* THIRD COLUMN */}
             <div className="mt-6 basis-1/4 sm:mt-0">
@@ -33,9 +33,9 @@ const Footer = () => {
                 <a href="https://www.linkedin.com/in/bilal-rashid-a04625198/" className="underline hover:text-blue-600 text-blue-400">
                     <p className="my-3">LinkedIn</p>
                 </a>
-                <a href="https://www.google.ca/" className="underline hover:text-blue-600 text-blue-400">
+                {/*<a href="https://www.google.ca/" className="underline hover:text-blue-600 text-blue-400">
                     <p>Contact Form</p>
-                </a>
+                </a>*/}
             </div>
         </div>
     </footer>
