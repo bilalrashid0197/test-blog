@@ -3,10 +3,8 @@ import Card from '@/app/(shared)/Card'
 import { Post } from '@prisma/client'
 import { prisma } from '@/app/api/client'
 
-
-
 type Props = {
-    postId: string;
+    posts: Array<any>;
 }
 
 function generateUniqueRandomNumbers(lowerLimit: number, upperLimit: number, count: number): number[] {
@@ -20,32 +18,7 @@ function generateUniqueRandomNumbers(lowerLimit: number, upperLimit: number, cou
     return Array.from(randomNumbers);
 }
 
-const data = async (postId: string) => {
-    const posts = await prisma.post.findMany({
-        where:{
-            NOT:{
-                id:{
-                    equals: postId
-                }
-            }
-        }
-    });
-    const formattedPosts = await Promise.all(
-        posts.map(async (post: Post) => {
-          const imageModule = require(`../../../public${post.image}`);
-          return { 
-            ...post,
-            image: imageModule.default,
-          }
-        })
-    
-      )
-      return formattedPosts;
-}
-
-
-const OtherPosts = async ({postId}: Props) => {
-  const posts = await data(postId);
+const OtherPosts =  ({posts}: Props) => {
   const postToExtract: number[] = generateUniqueRandomNumbers(0, posts.length - 1 , 3);
   return (
     <>

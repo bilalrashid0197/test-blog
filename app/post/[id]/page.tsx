@@ -12,6 +12,29 @@ type Props = {
 
 export const revalidate = 60;
 
+const data = async (postId: string) => {
+  const posts = await prisma.post.findMany({
+      where:{
+          NOT:{
+              id:{
+                  equals: postId
+              }
+          }
+      }
+  });
+  const formattedPosts = await Promise.all(
+      posts.map(async (post: PostType) => {
+        const imageModule = require(`../../../public${post.image}`);
+        return { 
+          ...post,
+          image: imageModule.default,
+        }
+      })
+  
+    )
+    return formattedPosts;
+}
+
 const getPost = async (id: string) => {
   const post: PostType | null = await prisma.post.findUnique({
     where: {id}
@@ -35,6 +58,7 @@ const getPost = async (id: string) => {
 const Post = async ({params}: Props) => {
   const {id} = params;
   const post: FormattedPost | null = await getPost(id);
+  const posts = await data(id);
   return (
     <main className="px-10 leading-7">
       <div className="md:flex gap-10 mb-5">
@@ -43,7 +67,7 @@ const Post = async ({params}: Props) => {
         </div>
         <hr id="hrElement" className="border-1 border-black"/>
         <div className="basis-1/4">
-          {post && <OtherPosts postId={post?.id}/>}
+          {post && <OtherPosts posts={posts}/>}
         </div>
       </div>
     </main>
