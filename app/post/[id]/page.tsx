@@ -39,11 +39,11 @@ const Post = async ({params}: Props) => {
     <main className="px-10 leading-7">
       <div className="md:flex gap-10 mb-5">
         <div className="basis-3/4">
-          <Content post={post}/>
+          {post && <Content post={post}/>}
         </div>
         <hr id="hrElement" className="border-1 border-black"/>
         <div className="basis-1/4">
-          <OtherPosts postId={post?.id}/>
+          {post && <OtherPosts postId={post?.id}/>}
         </div>
       </div>
     </main>

@@ -1,6 +1,8 @@
 "use client";
 import Image from 'next/image';
 import React, { useState } from 'react'
+import { FormattedPost } from '@/app/types'
+
 
 type Props = {
     post: FormattedPost;
@@ -44,4 +46,4 @@ const Content = ({post}: Props) => {
     )
 }
 
-export default Content
+export default Content;

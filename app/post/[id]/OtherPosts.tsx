@@ -4,12 +4,13 @@ import { Post } from '@prisma/client'
 import { prisma } from '@/app/api/client'
 
 
+
 type Props = {
     postId: string;
 }
 
-function generateUniqueRandomNumbers(lowerLimit: number, upperLimit: number, count: number) {
-    const randomNumbers = new Set();
+function generateUniqueRandomNumbers(lowerLimit: number, upperLimit: number, count: number): number[] {
+    const randomNumbers = new Set<number>(); // Specify the type of the Set's elements as number
   
     while (randomNumbers.size < count) {
       const randomNumber = Math.floor(Math.random() * (upperLimit - lowerLimit + 1)) + lowerLimit;
@@ -17,7 +18,7 @@ function generateUniqueRandomNumbers(lowerLimit: number, upperLimit: number, cou
     }
   
     return Array.from(randomNumbers);
-};
+}
 
 const data = async (postId: string) => {
     const posts = await prisma.post.findMany({
