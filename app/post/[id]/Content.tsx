@@ -7,7 +7,8 @@ type Props = {
 }
 
 const Content = ({post}: Props) => {
-
+    const date = new Date(post.createdAt);
+    const formattedDate = date.toLocaleDateString("en-Us", {year: "numeric", month: "long", day: "numeric"});
     return (<div className="prose w-full max-w-full mb-8">
         {/* Breadcrums */}
         <h5 className="text-wh-300">{`Home > ${post.category} > ${post.title}`}</h5>
@@ -19,7 +20,7 @@ const Content = ({post}: Props) => {
         <h3 className="font-bold text-3xl mt-3">{post.title}</h3>
         <div className="flex gap-3">
             <h5 className="font-semibold text-xs">By <i>{post.author}</i></h5>
-            <h6 className="text-wh-300 text-xs">{post.createdAt}</h6>
+            <h6 className="text-wh-300 text-xs">{formattedDate}</h6>
         </div>
 
         {/* IMAGE */}
