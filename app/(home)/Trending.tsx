@@ -61,10 +61,8 @@ const Trending = ({trendingPosts}: Props) => {
         <TrendingCard className="col-span-1 row-span-1 bg-wh-500" post={trendingPosts[3]}/>
     </div>
 
-    <p className="text-sm">
-        vdfvfdvdfdvdvdfv
-    </p>
-
+    <p className="text-sm">Explore the posts that are igniting discussions and drawing readers in droves. This is where thought meets popularity — The Digital Blog&apos;s trending topics.</p>
+    
     </section>
   )
 }
