@@ -11,7 +11,7 @@ const Navbar = (props: Props) => {
   {/* TITLE AND SUBTITLE */}
   <div className="flex justify-between px-10 pt-10 pb-1">
     <div className="w-2/4">
-      <h1 className="font-bold text-3xl md:text-4xl"><a href="/">The Digital Blog</a></h1>
+      <h1 className="font-bold text-3xl md:text-4xl"><a href="/">The Daily Blog</a></h1>
       <p className="mt-3 text-sm">
         Discover fresh perspectives and join the conversation on our blog — where every post is a new adventure in thought and community.
       </p>
