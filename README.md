@@ -90,7 +90,7 @@ Please follow instructions below to install and run the project on your local de
    ```sh
    cd app && npm install
    ```
-5. Run the the development server on your local machine.
+3. Run the the development server on your local machine.
     ```sh
     cd app && npm run dev
     ```
